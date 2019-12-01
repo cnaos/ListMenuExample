@@ -21,14 +21,14 @@ class MainActivity : AppCompatActivity() {
         // メニュー画面のリストに表示するラベルと
         // タップされたときに実行する処理の定義
         val listItems = listOf(
-            MyMenuItem("Toast表示") {
-                Toast.makeText(it, "Toast Test", Toast.LENGTH_LONG).show()
+            MyMenuItem("Toast表示") { activity->
+                Toast.makeText(activity, "Toast Test", Toast.LENGTH_LONG).show()
             },
 
             MyMenuItem("何もしない"),
 
-            MyMenuItem("アプリ終了") {
-                it.finish()
+            MyMenuItem("アプリ終了") { activity->
+                activity.finish()
             }
         )
     }
