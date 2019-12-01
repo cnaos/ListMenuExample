@@ -9,17 +9,16 @@ import androidx.databinding.DataBindingUtil
 import io.github.cnaos.example.listmenuexample.databinding.MenuListItemBinding
 
 
-
 class MyMenuListAdapter(
     context: Context,
     menuList: List<MyMenuItem>,
     private val onClickListener: ((View, MyMenuItem) -> Unit)? = null
-) : ArrayAdapter<MyMenuItem>(context,0,menuList){
+) : ArrayAdapter<MyMenuItem>(context, 0, menuList) {
 
     private val inflater = LayoutInflater.from(context)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val binding=
+        val binding =
             if (convertView == null) {
                 val tmpBinding: MenuListItemBinding = DataBindingUtil.inflate(
                     inflater,
