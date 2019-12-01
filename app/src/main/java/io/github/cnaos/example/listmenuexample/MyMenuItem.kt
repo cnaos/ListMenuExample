@@ -1,5 +1,9 @@
 package io.github.cnaos.example.listmenuexample
 
-class MyMenuItem(label: String) {
+import android.app.Activity
+import androidx.fragment.app.Fragment
 
-}
+class MyMenuItem(
+    val label: String,
+    val executeBlock: ((activity: Activity) -> Unit?)? = null
+)
